@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+:root {
+     --badge: "M150 0L127.55 24.5125L97.9125 9.05L85.3125 39.65L52.1 35.1L50.9 68.1L18.1125 75L28.4 106.412L0 123.95L20.6125 150.013L0 176.05L28.4 193.588L18.1125 225L50.9 231.912L52.1 264.9L85.3125 260.363L97.9125 290.963L127.55 275.5L150 300L172.462 275.5L202.087 290.963L214.713 260.363L247.913 264.9L249.113 231.912L281.9 225L271.6 193.588L300 176.05L279.387 150.013L300 123.95L271.6 106.412L281.9 75L249.113 68.1L247.913 35.1L214.713 39.65L202.087 9.05L172.462 24.5125L150 0V0Z";
+    
+    --flower: "M115.825 22.425C121.725 8.8125 135.15 0 150 0C164.85 0 178.275 8.8125 184.175 22.425C196.1 13.5875 212.15 12.675 225 20.1C237.85 27.525 245.075 41.8625 243.388 56.6125C258.125 54.925 272.487 62.15 279.912 75C287.337 87.85 286.412 103.9 277.562 115.825C291.187 121.725 300 135.15 300 150C300 164.85 291.187 178.275 277.562 184.175C286.4 196.1 287.325 212.137 279.912 225C272.5 237.863 258.138 245.075 243.388 243.388C245.088 258.138 237.863 272.475 225 279.9C212.15 287.325 196.1 286.412 184.175 277.562C178.275 291.187 164.85 300 150 300C135.15 300 121.725 291.187 115.825 277.575C103.9 286.412 87.85 287.325 75 279.9C62.15 272.475 54.925 258.138 56.6125 243.388C41.8625 245.075 27.525 237.85 20.1 225C12.675 212.15 13.5875 196.1 22.4375 184.175C8.8125 178.275 0 164.85 0 150C0 135.15 8.8125 121.725 22.425 115.825C13.5875 103.9 12.675 87.85 20.1 75C27.525 62.15 41.8625 54.925 56.6125 56.6125C54.925 41.8625 62.15 27.525 75 20.1C87.85 12.675 103.9 13.5875 115.825 22.425V22.425Z";
+    
+    --heart: "M150 43.4375C125.138 -24.05 0 -14.025 0 88.0375C0 138.887 38.25 206.55 150 275.5C261.75 206.55 300 138.887 300 88.0375C300 -13.4375 175 -24.45 150 43.4375V43.4375Z";
+}
+
+body{
+    display: flex;
+    padding: 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(39, 245, 224),rgb(57, 228, 228))
+  }
+  .container{
+    width: 850px;
+    padding: 30px 35px 35px;
+    background: #f2f6f5;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgba(27, 2, 2, 0.1);
+  }
+  .container.disable .editor-panel,
+  .container.disable .controls .reset-filter,
+  .container.disable .controls .save-img{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .container h2{
+    margin-top: -8px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .container .wrapper{
+    display: flex;
+    margin: 20px 0;
+    min-height: 335px;
+  }
+.flower {
+    cursor: pointer;
+    clip-path: path(var(--flower));
+    
+}
+
+.badge {
+    cursor: pointer;
+    clip-path: path(var(--badge));
+}
+
+.heart {
+    clip-path: path(var(--heart));
+}
+.diamond, .dia {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+  }
+  .diamond {
+    transform: rotate(45deg) translateY(-25px) translateX(-25px);
+  }
+  .diamond .dia {
+    width: 300px;
+    height: 300px;
+    transform: rotate(-45deg);
+  }
+  .diamond img {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    
+  }
+  
+  .losange, .losange div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+.losange {
+  transform: rotate(45deg) translateY(10px);
+}
+.losange .los1 {
+  width: 355px;
+  height: 355px;
+  transform: rotate(-45deg) translateY(-74px);
+}
+.losange .los1 img {
+  width: 100%;
+  height: auto;
+  height: 100%;
+}
+
+.part {
+    padding: 50px 20px 85px;
+    background: #fafcfc;
+    color: #AFE4FC;
+  }
+ 
+.wrapper .editor-panel{
+  padding: 15px 20px;
+  width: 280px;
+  border-radius: 5px;
+  border: 1px solid #2d5dd6;
+}
+.editor-panel .title{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.editor-panel .options, .controls{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.editor-panel button{
+  outline: none;
+  height: 40px;
+  font-size: 14px;
+  color: #393a3b;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  border: 1px solid #aaa;
+}
+.editor-panel .filter button{
+  width: calc(100% / 2 - 4px);
+}
+.editor-panel button:hover{
+  background: #f5f5f5;
+}
+.filter button.active{
+  color: #fff;
+  border-color: #f116db;
+  background: #f116db;
+}
+.filter .slider{
+  margin-top: 12px;
+}
+.filter .slider .filter-info{
+  display: flex;
+  color: #464646;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.filter .slider input{
+  width: 100%;
+  height: 5px;
+  accent-color: #f116db;
+}
+.editor-panel .rotate{
+  margin-top: 17px;
+}
+.editor-panel .rotate button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 2 - 3px);
+}
+.rotate .options button:nth-child(3),
+.rotate .options button:nth-child(4){
+  font-size: 18px;
+}
+.rotate .options button:active{
+  color: #fff;
+  background: #f116db;
+  border-color: #204cec;
+}
+.wrapper .preview-img{
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  margin-left: 20px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.frame{
+  width: 300px;
+  height: 300px;
+  position: relative; 
+  border: 1px black;
+}
+.preview-img img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btn,.controls button {
+  padding: 11px 20px;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  color: black;
+}
+.controls .reset-filter{
+  color: #6C757D;
+  border: 1px solid #6C757D;
+}
+.controls .reset-filter:hover{
+  color: #fff;
+  background: #6C757D;
+}
+.controls .choose-img{
+  background: #6C757D;
+  border: 1px solid #6C757D;
+}
+.btn,.controls .save-img{
+  margin-left: 5px;
+  background: #f116db;
+  border: 1px solid #f116db;
+}
+.btn:hover{
+    background: #f116db;
+    color: #faf5f5;
+}
+
+@media screen and (max-width: 760px) {
+  .container{
+    padding: 25px;
+  }
+  .container .wrapper{
+    flex-wrap: wrap-reverse;
+  }
+  .wrapper .editor-panel{
+    width: 100%;
+  }
+  .wrapper .preview-img{
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .controls button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .controls .row{
+    width: 100%;
+  }
+  .controls .row .save-img{
+    margin-left: 0px;
+  }
+}
